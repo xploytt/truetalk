@@ -10,15 +10,17 @@ import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 
 function Footer(props) {
     return (
-        <footer id='footer' className='text-white bg-[#000000]'>
+        <footer id='footer' className='text-white bg-[#000000] pt-[50px]'>
+            <div>
             <div id='footer-logo-socials'>
-                <img src={Logo} alt='True talk logo' />
-                <p id='who-am-i'>
+                <div className='w-[70%] mx-auto'>
+                    <img src={Logo} alt='True talk logo' className='mx-auto'/>
+                </div>
+                <p id='who-am-i' className='text-center mt-[30px] w-[90%] mx-auto'>
                     Prolific Writer | Motivational Speaker | Content Creator | Brand Influencer
                 </p>
-                <div id='socials'>
-                    <div class="dz-social-icon style-1">
-                        <ul>
+
+                <ul id='socials' className='pt-[30px] dz-social-icon style-1 flex items-center justify-around w-[90%] mx-auto max-w-[370px] flex-wrap'>
                             <li>
                                 <a href="https://wa.me/message/IWJJ2RQTHSESL1" rel='noreferrer' target="_blank">
                                     <BsWhatsapp /> 
@@ -54,33 +56,31 @@ function Footer(props) {
                                     <BsSnapchat /> 
                                 </a>
                             </li>            
-                        </ul>
-                    </div>
-                </div>
-
+                </ul>
             </div>
 
-            <nav>
-                <div>
+            <nav className='w-[90%] mx-auto'>
+                <div className='flex items-center mt-[50px] gap-10'>
                     <div id='webLinks'>
                         <h4>Our Links</h4>
                         {webLinks.map((link) => {
-                            const word = kabbasToTitleCase(link);
+                            let word = kabbasToTitleCase(link);
+                            word = word == 'Terms And Conditions' ? 'Terms & Conditions': word
                             return (
-                                <a key={link} href={link}>
-                                   <span>&gt;</span> {word}
+                                <a key={link} href={link} className='block'>
+                                   <span className='footer-entity'>&gt;</span> {word}
                                 </a>
                             );
                         })}
                     </div>
 
                     <div id='webResourceLinks'>
-                        <h4>True Talk</h4>
+                        <h4>True Talk ?</h4>
                         {webResourceLinks.map((link) => {
                             const word = kabbasToTitleCase(link);
                             return (
-                                <a key={link} href={link}>
-                                   <span>&gt;</span> {word}
+                                <a key={link} href={link} className='block'>
+                                   <span className='footer-entity'>&gt;</span> {word}
                                 </a>
                             );
                         })}
@@ -90,20 +90,21 @@ function Footer(props) {
                 <div id='footer-contact'>
                     <h4>Get In Touch With Us</h4>
                     <ul>
-                        <li>
-                            <FiMapPin /> <span>Northampton, UK</span>
+                        <li className='contact-list'>
+                            <FiMapPin className='footer-entity'/> <span id='city-country'>Northampton, UK</span>
                         </li>
 
-                        <li>
-                            <FiPhone /> <a href='tel:+447459340603'>+447459340603</a>
+                        <li className='contact-list'>
+                            <FiPhone className='footer-entity' /> <a href='tel:+447459340603'>+447459340603</a>
                         </li>
 
-                        <li>
-                            <FiMail /> <a href='mailto:contact@truetalkarena.com'>contact@truetalkarena.com</a>
+                        <li className='contact-list'>
+                            <FiMail className='footer-entity' /> <a href='mailto:contact@truetalkarena.com'>contact@truetalkarena.com</a>
                         </li>
                     </ul>
                 </div>
             </nav>
+            </div>
 
             <div id='footer-bottom'>
                 <hr />
