@@ -4,6 +4,7 @@ import {BsFacebook, BsInstagram, BsSnapchat, BsTwitter, BsWhatsapp, BsYoutube } 
 import { webLinks, webResourceLinks } from '../data/links';
 import kabbasToTitleCase from '../js/toTitleCase';
 import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
+import '../styles/footer.scss';
 
 
 

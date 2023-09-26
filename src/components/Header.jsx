@@ -6,6 +6,8 @@ import Cart from './Cart';
 import BlueButton from './BlueButton';
 import { mobileNavLinks } from '../data/links';
 import kabbasToTitleCase from '../js/toTitleCase';
+import '../styles/header.scss';
+import '../styles/mobile_nav.scss';
 
 
 function Header(props) {
