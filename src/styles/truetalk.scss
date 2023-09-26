@@ -1,39 +1,43 @@
 @import url('./index.scss');
 @import url('./header.scss');
-// @import url('./footer.scss');
-// @import url('./mobile_nav.scss');
+@import url('./footer.scss');
+@import url('./mobile_nav.scss');
 
 
 *, body {
-    font-family: Poppins, sans-serif;;
-}
-
-input{
+    font-family: Poppins, sans-serif;
+  }
+  
+  input {
     outline: none;
     border: none;
-
-    &:focus{
-        outline: none;
-        border: none;
+  
+    &:focus {
+      outline: none;
+      border: none;
     }
-}
-
-.blue-btn{
+  }
+  
+  .blue-btn {
     border-radius: 7px;
-}
-
-.blue-text-hover, .orange-text-hover, #mobile-nav ul a svg{
+  }
+  
+  .transition-color {
     transition: color 0.4s ease;
-}
-
-.blue-text-hover{
-    &:hover{
-        color: #154ea4;
+  
+    &:hover {
+      color: #154ea4;
     }
-}
-
-.orange-text-hover, #mobile-nav ul a svg{
-    &:hover{
-        color: #e58c23;
+  }
+  
+  .orange-text-hover, #mobile-nav ul a svg {
+    @extend .transition-color;
+  }
+  
+  #mobile-nav ul a svg {
+    @extend .transition-color;
+    &:hover {
+      color: #e58c23;
     }
-}
+  }
+  

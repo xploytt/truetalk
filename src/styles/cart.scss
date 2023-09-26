@@ -1,27 +1,19 @@
 .cart {
-    position: relative;
-    display: inline-block;
-    margin: 20px;
-    padding: 10px;
-    background-color: transparent;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    &:hover{
-        background-color: white;
-        .cart-icon{
-          color: black;
-        }
-    }
-  }
-  
   .cart-icon {
     color: #fff;
     font-size: 24px;
     margin-right: 5px;
   }
-  
+
   .cart-count {
     background-color: #154ea4;
     color: #fff;
@@ -35,4 +27,12 @@
     top: -10px;
     right: -10px;
   }
-  
+
+  &:hover {
+    background-color: white;
+
+    .cart-icon {
+      color: black;
+    }
+  }
+}
