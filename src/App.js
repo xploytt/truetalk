@@ -13,12 +13,7 @@ import Videos from "./pages/Videos";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Blogs from "./pages/Blogs";
 import TermsAndServices from "./pages/TermsAndServices";
-// import './styles/index.css';
-// import './styles/footer.css';
-// import './styles/header.css';
-// import './styles/cart.css';
-// import './styles/mobile_nav.css';
-// import './styles/truetalk.css';
+import './styles/truetalk.scss'
 
 
 function App(props) {
