@@ -1,7 +1,8 @@
-@import './index.scss';
-@import './header.scss';
-@import './footer.scss';
-@import './mobile_nav.scss';
+@import url('./index.scss');
+@import url('./header.scss');
+@import url('./footer.scss');
+@import url('./mobile_nav.scss');
+
 
 
 *, body {
@@ -22,7 +23,7 @@ input{
     border-radius: 7px;
 }
 
-.blue-text-hover, .orange-text-hover{
+.blue-text-hover, .orange-text-hover, #mobile-nav ul a svg{
     transition: color 0.4s ease;
 }
 
@@ -32,7 +33,7 @@ input{
     }
 }
 
-.orange-text-hover{
+.orange-text-hover, #mobile-nav ul a svg{
     &:hover{
         color: #e58c23;
     }
