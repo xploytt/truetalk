@@ -1,37 +1,44 @@
 header {
     #mobile-nav {
-      @apply fixed h-[100vh] top-0 z-20;
-      transition: transform 500ms ease-in-out;
-      transform: translateX(-100%);
-      opacity: 0.95;
-      background-color: #383838;
-  
-      &.open {
-        transform: translateX(0);
-      }
-  
-      nav {
-        a {
-          border-bottom: 1px solid white;
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        z-index: 20;
+        transition: transform 500ms ease-in-out;
+        transform: translateX(-100%);
+        opacity: 0.95;
+        background-color: #383838;
+
+        &.open {
+            transform: translateX(0);
         }
-      }
-  
-      ul {
-        a {
-          svg {
-            color: #154ea4;
-            // @apply orange-text-hover;
-          }
+
+        nav {
+            a {
+                border-bottom: 1px solid white;
+            }
         }
-      }
-  
-      @media (min-width: 1000px) {
-        @apply hidden;
-      }
+
+        ul {
+            a {
+                svg {
+                    color: #154ea4;
+                    // @extend .orange-text-hover;
+                    transition: color 0.4s ease;
+
+                    &:hover {
+                        color: #154ea4;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1000px) {
+            display: none;
+        }
     }
-  
+
     input {
-      border-radius: 8px;
+        border-radius: 8px;
     }
-  }
-  
+}
