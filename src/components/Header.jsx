@@ -29,7 +29,7 @@ function Header(props) {
                     <BlueButton text={'Get In Touch'} id={'get-in-touch'}/>
                     
                     <BlueButton text={
-                        <a>
+                        <a href=''>
                             <FaUser className=''/>
                         </a>
                     } styles={``}/>
@@ -54,7 +54,7 @@ function Header(props) {
             </div>
 
             <div id='mobile-nav' className={`w-[275px] ${isOpen ? 'open': ''} `}>
-                    <div id='mobile-logo' className='w-[12rem]'>
+                    <div id='mobile-logo' className='w-[12rem] mt-[2rem]'>
                         <img src={Logo} alt='True Talk Logo' />
                     </div>
 
