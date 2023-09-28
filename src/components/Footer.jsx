@@ -15,7 +15,7 @@ function Footer(props) {
                     <img src={Logo} alt='True talk logo' className='mx-auto'/>
                 </div>
                 <p id='who-am-i' className='text-center mt-[30px] w-[90%] mx-auto'>
-                    Prolific Writer | Motivational Speaker | Content Creator | Brand Influencer
+                    Prolific Writer | Motivational Speaker | Content Creator | Brand Influencer | Moral Educator | Marriage counsellor
                 </p>
 
                 <ul id='socials' className='pt-[30px] dz-social-icon style-1 flex items-center justify-around w-[90%] mx-auto max-w-[370px] flex-wrap'>
@@ -65,7 +65,7 @@ function Footer(props) {
                             let word = kabbasToTitleCase(link);
                             word = word == 'Terms And Conditions' ? 'Terms & Conditions': word
                             return (
-                                <a key={link} href={link} className='block'>
+                                <a key={link} href={`/${link}`} className='block visited:text-purple-500'>
                                    <span className='footer-entity'>&gt;</span> {word}
                                 </a>
                             );
@@ -75,9 +75,10 @@ function Footer(props) {
                     <div id='webResourceLinks'>
                         <h4>True Talk ?</h4>
                         {webResourceLinks.map((link) => {
-                            const word = kabbasToTitleCase(link);
+                            const word = kabbasToTitleCase(link)
+                            link = link == 'true-talk-arena' ? '' : link
                             return (
-                                <a key={link} href={link} className='block'>
+                                <a key={link} href={`/${link}`} className='block visited:text-purple-500'>
                                    <span className='footer-entity'>&gt;</span> {word}
                                 </a>
                             );

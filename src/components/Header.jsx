@@ -6,6 +6,7 @@ import Cart from './Cart';
 import BlueButton from './BlueButton';
 import { mobileNavLinks } from '../data/links';
 import kabbasToTitleCase from '../js/toTitleCase';
+import redirectToPage from '../js/redirectPage';
 
 
 function Header(props) {
@@ -26,13 +27,15 @@ function Header(props) {
                 </div>
 
                 <div id='hamburger-login' className='ml-auto flex items-center'>
-                    <BlueButton text={'Get In Touch'} id={'get-in-touch'}/>
+                    <BlueButton text={'Get In Touch'} id={'get-in-touch'} callback={()=>{
+                        redirectToPage('/contact-us')
+                    }} type='button' />
                     
                     <BlueButton text={
-                        <a href=''>
-                            <FaUser className=''/>
+                        <a href='/account'>
+                            <FaUser />
                         </a>
-                    } styles={``}/>
+                    } styles={``} callback={()=>{}}/>
 
                     <div className={`hamburger-menu ${isOpen ? 'open' : ''}`}>
                         <BlueButton id={'menu-button'} icon={isOpen ? <FaTimes /> : <FaBars />} styles={''} callback={toggleMenu} />
@@ -70,7 +73,7 @@ function Header(props) {
                             let word = kabbasToTitleCase(link);
                             word = word == 'Contact Us' ? 'Contact': word
                             return (
-                                <a key={link} href={link} className='block blue-text-hover text-white text-[1.1rem] w-[90%] mx-auto my-[10px] py-[7px]'> {word} </a>
+                                <a key={link} href={link} className='block hover:text-[#154ea4] visited:text-purple-500 text-white text-[1.1rem] w-[90%] mx-auto my-[10px] py-[7px]'> {word} </a>
                             );
                         })}
                     </nav>
@@ -127,7 +130,12 @@ function Header(props) {
                 </div>
 
                 <div className='ml-auto'>
-                    <BlueButton text={'Get In Touch'} id={'get-in-touch'} styles={`w-[150px] h-[50px] mr-[15px]`}/>
+                    
+                    <BlueButton text={'Get In Touch'} id={'get-in-touch'} styles={`w-[150px] h-[50px] mr-[15px]`} 
+                        callback={()=>{
+                        redirectToPage('/contact-us')
+                    }} type='button'
+                    />
                 </div>
                 </div>
             </nav>

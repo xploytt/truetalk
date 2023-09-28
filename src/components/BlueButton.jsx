@@ -1,8 +1,8 @@
 import React from 'react';
 
-function BlueButton({icon, id, text, callback, iconLeft, styles}) {
+function BlueButton({icon, id, text, callback, iconLeft, styles, type}) {
     return (
-        <button id={id} className={`bg-[#154ea4] blue-btn text-white ${styles}`} onClick={
+        <button type={type} id={id} className={`bg-[#154ea4] blue-btn text-white ${styles}`} onClick={
             (e)=>{
                 callback(e)
             }
