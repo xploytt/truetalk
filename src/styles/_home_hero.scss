@@ -1,0 +1,18 @@
+section#hero{
+    
+    background-color: #161953;
+    color: white;
+    margin-bottom: 50px;
+
+    h3{
+        letter-spacing: .6rem;
+        margin-bottom: 10px;
+        color: #cb9dc7;
+    }
+
+    #who-am-i-hero{
+        @media (max-width:575px) {
+            display: none;
+        }
+    }
+}

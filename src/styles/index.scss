@@ -529,6 +529,11 @@ video {
   margin-bottom: 10px;
 }
 
+.my-\[15px\] {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .my-\[30px\] {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -616,6 +621,10 @@ video {
 
 .w-\[10rem\] {
   width: 10rem;
+}
+
+.w-\[120px\] {
+  width: 120px;
 }
 
 .w-\[12rem\] {
@@ -912,6 +921,11 @@ video {
   padding-bottom: 20px;
 }
 
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .py-\[50px\] {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1037,6 +1051,10 @@ video {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .outline {

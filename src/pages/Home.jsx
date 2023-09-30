@@ -2,15 +2,17 @@ import React from 'react';
 import Newsletter from '../components/Newsletter';
 import YouTubeLinkWrapper from '../components/YouTubeLinkWrapper';
 import TestimonialSection from '../components/Testimonials';
+import HomeHero from '../components/HomeHero';
 
 
 function Home(props) {
     return (
-        <div>
+        <main>
+        <HomeHero />
           <YouTubeLinkWrapper />
           <TestimonialSection />
           <Newsletter />
-        </div>
+        </main>
     );
 }
 
