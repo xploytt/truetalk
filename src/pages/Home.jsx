@@ -1,12 +1,14 @@
 import React from 'react';
 import Newsletter from '../components/Newsletter';
 import YouTubeLinkWrapper from '../components/YouTubeLinkWrapper';
+import TestimonialSection from '../components/Testimonials';
+
 
 function Home(props) {
     return (
         <div>
-          <p>Home content</p>
           <YouTubeLinkWrapper />
+          <TestimonialSection />
           <Newsletter />
         </div>
     );
