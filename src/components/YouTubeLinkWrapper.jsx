@@ -11,7 +11,7 @@ const YouTubeVideoLinkWrapper = () => {
   return (
     <section className=''>
       <a id='youtube-link'
-        href="https://www.youtube.com/@truetalkarena7526"
+        href="https://youtu.be/G5JJM0f7hhM"
         target="_blank"
         rel="noopener noreferrer"
         className="block relative mx-auto"
