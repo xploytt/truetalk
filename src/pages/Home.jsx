@@ -8,7 +8,7 @@ import HomeHero from '../components/HomeHero';
 function Home(props) {
     return (
         <main>
-        <HomeHero />
+          <HomeHero />
           <YouTubeLinkWrapper />
           <TestimonialSection />
           <Newsletter />
