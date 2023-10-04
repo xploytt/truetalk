@@ -1,0 +1,36 @@
+header svg, header a {
+  transition: color 0.4s ease;
+}
+header #mobile-nav {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  z-index: 20;
+  transition: transform 500ms ease-in-out;
+  transform: translateX(-100%);
+  opacity: 0.95;
+  background-color: #383838;
+}
+header #mobile-nav.open {
+  transform: translateX(0);
+}
+header #mobile-nav nav a {
+  border-bottom: 1px solid white;
+}
+header #mobile-nav nav a:hover {
+  color: #154ea4;
+}
+header #mobile-nav ul a svg {
+  color: #154ea4;
+}
+header #mobile-nav ul a svg:hover {
+  color: #e58c23;
+}
+@media (min-width: 1000px) {
+  header #mobile-nav {
+    display: none;
+  }
+}
+header input {
+  border-radius: 8px;
+}/*# sourceMappingURL=mobile_nav.css.map */

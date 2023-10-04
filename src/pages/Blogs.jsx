@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Newsletter from '../components/Newsletter';
+import { useOutletContext } from 'react-router-dom';
 
 function Blogs(props) {
+    const {updatePage} = useOutletContext()
+
+    useEffect(()=>{
+        updatePage("Blogs")
+    })
+    
     return (
         <div>
-            Blogs page
             <Newsletter />
         </div>
     );

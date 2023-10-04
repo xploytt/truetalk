@@ -1,6 +1,5 @@
 import React from "react";
 import {Route, Routes} from 'react-router-dom'
-// import SharedLayout from './FooterHeader';
 import Home from './pages/Home';
 import About from './pages/About';
 import Header from "./components/Header";
@@ -15,6 +14,7 @@ import Blogs from "./pages/Blogs";
 import TermsAndServices from "./pages/TermsAndServices";
 import Account from "./pages/Account";
 import NotFound from "./pages/NotFound";
+import SharedLayout from "./components/SharedLayout";
 import './styles/truetalk.scss'
 
 
@@ -26,9 +26,9 @@ function App(props) {
       <Routes>
         <Route path='/'element={<Home />}></Route>
         <Route path='/home'element={<Home />}></Route>
-
         <Route path='/books' element={<Books />}></Route>
-          <Route>
+        
+          <Route element={<SharedLayout />}>
             <Route path='/about' element={<About />}></Route>
             <Route path='/account' element={<Account />}></Route>
             <Route path='/gallery' element={<Gallery />}></Route>

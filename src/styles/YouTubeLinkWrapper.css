@@ -1,0 +1,46 @@
+.youtube-video-wrapper {
+  background-position: center;
+  height: 100%;
+  width: 95%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+.overlay .youtube-logo {
+  font-size: 4rem;
+  color: #ff0000;
+}
+
+#youtube-link {
+  height: 300px;
+  width: 96%;
+}
+@media (min-width: 575px) {
+  #youtube-link {
+    width: 530px;
+  }
+}
+@media (min-width: 770px) {
+  #youtube-link {
+    width: 700px;
+  }
+}
+@media (min-width: 1000px) {
+  #youtube-link {
+    width: 990px;
+  }
+}
+@media (min-width: 1200px) {
+  #youtube-link {
+    width: 1190px;
+  }
+}/*# sourceMappingURL=YouTubeLinkWrapper.css.map */

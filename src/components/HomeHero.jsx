@@ -10,15 +10,15 @@ function BookAsideCard({ Img, name }) {
   return (
     <>
       <a className='text-black block'>
-        <div className='flex items-end bg-white w-[350px] mr-2 p-3'>
-          <div className='w-[100px]'>
+        <div className='flex items-end bg-white w-[350px] mr-2'>
+          <div className='w-[100px] m-[.8rem]'>
             <img src={Img} alt={`${name} logo`} className='w-[100%]' />
           </div>
-          <div>
-            <span className='block text-[#b0afcb]'>True-Talk Arena</span>
+          <div className='m-[.8rem]'>
+            <span className='block text-[#1a1668]'>True-Talk Arena</span>
             <div className='flex items-center'>
-              <span className='text-[#03a9f4]'>£3.99</span>
-              <div className='flex items-center ml-auto'>
+              <span className='text-[#03a9f4] text-[1.2rem] font-[600]'>£3.99</span>
+              <div className='flex items-center ml-[1rem] gap-1'>
                 {starArray.map((value, i) => {
                   console.log(value)
                   return <FaStar key={i} />
@@ -39,7 +39,7 @@ const contentData = [
     listing: ['We write to impact knowledge.', 'We speak to impact knowledge.'],
   },
   {
-    header: 'Content Writer',
+    header: 'Content & Books',
     whoAmI: ['Content Creator', ' Brand Influencer'],
     listing: ["We create content to change people's mindset.", 'We Influence'],
   },
@@ -89,7 +89,7 @@ function HomeHero() {
     backgroundImage: `url(${HeroBG})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    // backgroundColor: '#161953'
+    backgroundPosition: 'center'
   };
 
   useEffect(() => {

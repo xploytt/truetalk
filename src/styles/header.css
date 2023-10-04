@@ -1,0 +1,98 @@
+@import url("./cart.scss");
+header div.header-wrapper {
+  background-color: #060340;
+}
+header #logo-login-wrapper,
+header #tab-nav > div {
+  width: 95%;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  header #logo-login-wrapper,
+  header #tab-nav > div {
+    max-width: 990px;
+  }
+}
+@media (max-width: 770px) {
+  header #logo-login-wrapper,
+  header #tab-nav > div {
+    max-width: 570px;
+  }
+}
+@media (min-width: 1200px) {
+  header #logo-login-wrapper,
+  header #tab-nav > div {
+    max-width: 1190px;
+  }
+}
+@media (min-width: 570px) {
+  header #logo-div img {
+    min-width: 200px;
+  }
+}
+header #cart-search input {
+  border-radius: 8px;
+}
+header #search-btn,
+header #mobile-search-btn {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+}
+header #search-btn svg,
+header #mobile-search-btn svg {
+  fill: gray;
+  font-size: 1.2rem;
+}
+header #logo-div {
+  width: 10rem;
+}
+@media (max-width: 750px) {
+  header #hamburger-login #get-in-touch {
+    display: none;
+  }
+}
+@media (max-width: 999px) {
+  header #cart-search {
+    display: none;
+  }
+  header #tab-nav {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  header #hamburger-login {
+    display: none;
+  }
+  header div.header-wrapper {
+    background-color: black;
+  }
+}
+
+/* Hamburger Styles */
+#hamburger-login button {
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hamburger-login button svg {
+  font-size: 1.3rem;
+}
+#hamburger-login #get-in-touch {
+  width: 150px;
+}
+
+.hamburger-menu {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.hamburger-menu #menu-button {
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+.hamburger-menu .open #menu-button {
+  transform: rotate(90deg) translateX(5px);
+}/*# sourceMappingURL=header.css.map */
