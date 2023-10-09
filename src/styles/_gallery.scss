@@ -27,3 +27,10 @@
         }
      }
 }
+
+.image-wrapper{
+   @media (max-width: 575px) {
+      width: 95%;
+      margin: 0 auto;
+   }
+}
