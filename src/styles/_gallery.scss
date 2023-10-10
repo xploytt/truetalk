@@ -1,36 +1,8 @@
-#gallery-section{
-    @media (min-width:575px) {
-       #img-grid{
-        width: 520px;
-           @apply grid-cols-2
-       }
-    }
-
-    @media (min-width:770px) {
-        #img-grid{
-         width: 720px;
-            @apply grid-cols-2
-        }
-     }
-
-     @media (min-width:1000px) {
-        #img-grid{
-         width: 930px;
-            @apply grid-cols-3
-        }
-     }
-
-     @media (min-width:1200px) {
-        #img-grid{
-         width: 1190px;
-            @apply grid-cols-4
-        }
-     }
-}
+@import './content_grid';
 
 .image-wrapper{
    @media (max-width: 575px) {
-      width: 95%;
+      width: 90%;
       margin: 0 auto;
    }
 }

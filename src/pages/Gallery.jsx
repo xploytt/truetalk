@@ -20,7 +20,7 @@ function Gallery(props) {
         <>
             <main>
                 <section id='gallery-section' className='bg-[#212529] py-[80px]'>
-                    <div id='img-grid' className='grid mx-auto items-center gap-6'>
+                    <div id='content-grid' className='grid mx-auto items-center gap-6'>
                         {imgs.map((pic, i)=> 
                         <div key={i} className='mx-auto image-wrapper'>
                         <img alt='One of our images from true talk gallery' src={pic} className='w-[100%]' />
