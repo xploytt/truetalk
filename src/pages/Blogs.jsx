@@ -87,13 +87,14 @@ function Blogs(props) {
                 <div id='vid-content-grid' className='grid mx-auto items-center gap-6 relative'>
                     {currentBlogs.map(({date, imgUrl, title, link}, i) => <BlogCard key={i} link={link} date={date} imgUrl={imgUrl} title={title}/>)}
                     
-                    <div id='blogCtrlBtns' className='flex items-center gap-3'>
-                      <BlueButton text={'<< Back'} callback={handlePrevPage}/>
-                      <BlueButton text={'Next >>'} callback={handleNextPage}/>
+                        <div id='blogCtrlBtns' className='flex items-center gap-3'>
+                          <BlueButton text={'<< Back'} callback={handlePrevPage}/>
+                          <BlueButton text={'Next >>'} callback={handleNextPage}/> <br />
+                          <div id='pages-details' className='text-white'>
+                            {currentPage} / {totalPages}
+                        </div>
+                        </div>
                     </div>
-                </div>
-
-                
                 </section>
             </main>
             <Newsletter />
