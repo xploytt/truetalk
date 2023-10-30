@@ -13,10 +13,9 @@
         padding: 20px 0 15px;
         font-size: 1.3rem;
         font-weight: 600;
-        a{
-            transition: color 300ms ease-in-out;
-        }
-        a:hover{
+        transition: color 300ms ease-in-out;
+        
+        &:hover{
             color: #e58c23;
         }
     }
@@ -24,6 +23,12 @@
     .blog-graphic{
         img{
             object-fit: cover;
+        }
+
+        & + div.no-blog{
+            @media (min-width: 535px) and (max-width: 770px) {
+                width: 480px;
+            }
         }
     }
 
