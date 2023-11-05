@@ -57,10 +57,19 @@
     textarea,
     button {
       border-radius: 3px;
-      //   max-width: 100%;
       padding: 0 1rem;
-      width: 30rem;
       color: black;
+
+      @media (max-width: 950px) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 750px;
+      }
+
+      @media (min-width: 950px) {
+        width: 30rem;
+      }
     }
 
     textarea {
