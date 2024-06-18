@@ -38,19 +38,22 @@ To get a local copy up and running follow these simple steps:
 
 2. **Navigate to the project directory**
 
-   ```cd truetalk
+   ```sh
+   cd truetalk
 
    ```
 
 3. **Install dependencies**
 
-   ```npm install
+   ```
+   npm install
 
    ```
 
 4. **Run the application**
 
-   ```npm start
+   ```
+   npm start
 
    ```
 
