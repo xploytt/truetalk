@@ -32,13 +32,13 @@ To get a local copy up and running follow these simple steps:
 1. **Clone the repo**
 
    ```sh
-   git clone https://github.com/xploytt/truetalk-app.git
+   git clone https://github.com/xploytt/truetalk.git
 
    ```
 
 2. **Navigate to the project directory**
 
-   ```cd truetalk-app
+   ```cd truetalk
 
    ```
 
@@ -49,6 +49,7 @@ To get a local copy up and running follow these simple steps:
    ```
 
 4. **Run the application**
+
    ```npm start
 
    ```
