@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# TrueTalk App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TrueTalk is a web application designed to manage various sections of a website through an admin panel. It includes features such as a home page, about page, gallery, books section, blog, and contact page. The admin panel allows for easy updates to the gallery, books, blog, and advert page.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Admin Panel](#admin-panel)
+- [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Home Page**: The landing page of the application.
+- **About Page**: Provides information about the application.
+- **Gallery Page**: Displays a collection of images.
+- **Books Page**: Lists books available on the platform.
+- **Blog Page**: Contains blog posts.
+- **Contact Page**: Allows users to contact the site administrators.
+- **Admin Panel**: Secure area for administrators to manage the site content.
+  - **Dashboard**: Overview of the admin activities.
+  - **Gallery Management**: Add, update, and delete images.
+  - **Books Management**: Add, update, and delete book entries.
+  - **Blog Management**: Add, update, and delete blog posts.
+  - **Advert Management**: Manage advertisements displayed on the site.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+To get a local copy up and running follow these simple steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repo**
 
-### `npm run build`
+   ```sh
+   git clone https://github.com/xploytt/truetalk-app.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to the project directory**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```cd truetalk-app
 
-### `npm run eject`
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Install dependencies**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Run the application**
+   ```npm start
 
-## Learn More
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Once the application is running, you can navigate through the different pages of the site using the navigation bar. To access the admin panel, append `/admin` to the domain URL and log in with your administrator credentials.
 
-### Code Splitting
+## Admin Panel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The admin panel is accessible at `/admin`. Use the credentials provided during the setup to log in. Once logged in, you can use the dashboard to manage the gallery, books, blog posts, and advertisements.
 
-### Analyzing the Bundle Size
+### Admin Panel Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Dashboard**: Provides an overview of recent activities and statistics.
+- **Gallery Management**: Allows the admin to add and delete images in the gallery.
+- **Books Management**: Allows the admin to add, edit, and delete book entries.
+- **Blog Management**: Allows the admin to add, edit, and delete blog posts.
+- **Advert Management**: Allows the admin to manage advertisements displayed on the site.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Distributed under the MIT License. See `LICENSE` for more information.
