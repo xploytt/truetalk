@@ -504,6 +504,10 @@ video {
   z-index: 10;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
 .m-\[\.8rem\] {
   margin: 0.8rem;
 }
@@ -607,8 +611,16 @@ video {
   margin-right: auto;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-\[0\] {
+  margin-top: 0;
 }
 
 .mt-\[10px\] {
@@ -711,12 +723,24 @@ video {
   width: 150px;
 }
 
+.w-\[20\%\] {
+  width: 20%;
+}
+
+.w-\[250px\] {
+  width: 250px;
+}
+
 .w-\[275px\] {
   width: 275px;
 }
 
 .w-\[350px\] {
   width: 350px;
+}
+
+.w-\[3rem\] {
+  width: 3rem;
 }
 
 .w-\[40\%\] {
@@ -928,6 +952,14 @@ video {
   overflow-x: hidden;
 }
 
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.rounded-\[\.6rem\] {
+  border-radius: 0.6rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -964,6 +996,11 @@ video {
 .bg-\[\#f7f7f7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(247 247 247/var(--tw-bg-opacity));
+}
+
+.bg-\[white\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255/var(--tw-bg-opacity));
 }
 
 .bg-black {
@@ -1033,6 +1070,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-\[0\.5rem\] {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-\[1\.2rem\] {
   padding-left: 1.2rem;
   padding-right: 1.2rem;
@@ -1096,6 +1138,11 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-\[\.7rem\] {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 .py-\[100px\] {
@@ -1253,6 +1300,16 @@ video {
   color: rgb(26 22 104/var(--tw-text-opacity));
 }
 
+.text-\[\#696cff\] {
+  --tw-text-opacity: 1;
+  color: rgb(105 108 255/var(--tw-text-opacity));
+}
+
+.text-\[\#697a8d\] {
+  --tw-text-opacity: 1;
+  color: rgb(105 122 141/var(--tw-text-opacity));
+}
+
 .text-\[\#e58c23\] {
   --tw-text-opacity: 1;
   color: rgb(229 140 35/var(--tw-text-opacity));
@@ -1300,6 +1357,10 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .visited\:text-purple-500:visited {

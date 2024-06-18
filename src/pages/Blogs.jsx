@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import Newsletter from '../components/Newsletter';
-import { useOutletContext } from 'react-router-dom';
-import fetchBlogsDetails from '../utils/fetchBlogsDetails';
+import React, { useEffect, useState } from "react";
+import Newsletter from "../components/Newsletter";
+import { useOutletContext } from "react-router-dom";
 // import BlueButton from '../components/BlueButton';
-import '../styles/_blogs.scss'
-import VidsBlogsComp from '../components/VidsBlogsComp';
-
+import "../styles/_blogs.scss";
+import VidsBlogsComp from "../components/VidsBlogsComp";
 
 // function BlogCard({link, date, imgUrl, title}) {
 //       return(
@@ -32,35 +30,26 @@ import VidsBlogsComp from '../components/VidsBlogsComp';
 //       )
 // }
 
-
 function Blogs(props) {
-    const {updatePage} = useOutletContext()
-    const [blogDetails, setBlogDetails] = useState([]) 
+  const { updatePage } = useOutletContext();
 
-    useEffect(()=>{
-        updatePage("Blogs")
-    }, [])
+  useEffect(() => {
+    updatePage("Blogs");
+  }, []);
 
-    useEffect(()=> {
-         const dataUpdate = async () =>{
-            const blogData = await fetchBlogsDetails()
-            setBlogDetails(blogData)            
-        }
-
-        dataUpdate()
-    }, [])
-      
-    
-    return (
-        <>
-            <main>
-                <section id='blog-section' className='bg-[#212529] pt-[50px] pb-[100px]'>
-                  <VidsBlogsComp blogDetails={blogDetails} />
-                </section>
-            </main>
-            <Newsletter />
-        </>
-    );
+  return (
+    <>
+      <main>
+        <section
+          id="blog-section"
+          className="bg-[#212529] pt-[50px] pb-[100px]"
+        >
+          <VidsBlogsComp tab={"blog"} />
+        </section>
+      </main>
+      <Newsletter />
+    </>
+  );
 }
 
 export default Blogs;

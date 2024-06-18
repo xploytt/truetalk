@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
-import DisclaimerWrapper from "../components/DisclaimerWrapper";
+// import DisclaimerWrapper from "../components/DisclaimerWrapper";
 
 function TermsAndServices(props) {
   const { updatePage } = useOutletContext();

@@ -3,6 +3,7 @@ import { wrapperLinks } from "../data/links";
 import kabbasToTitleCase from "../js/toTitleCase";
 import "../styles/_linkWrapper.scss";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function LinkWrapper({ activePage }) {
   return (
@@ -17,7 +18,7 @@ function LinkWrapper({ activePage }) {
                   link == activePage ? "current" : ""
                 } w-[95%] px-[1.2rem] py-[1rem] font-[500] text-[1.1rem]`}
               >
-                <a href={`/${link}`}>{kabbasToTitleCase(link)}</a>
+                <Link to={`/${link}`}>{kabbasToTitleCase(link)}</Link>
                 <FaArrowRight />
               </li>
             );

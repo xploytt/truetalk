@@ -1,36 +1,59 @@
-import React, { useEffect } from 'react';
-import Newsletter from '../components/Newsletter';
-import { useOutletContext } from 'react-router-dom';
-import firstImg from '../assets/gallery/1.png'
-import secondImg from '../assets/gallery/2.png'
-import thirdImg from '../assets/gallery/3.png'
-import fourthImg from '../assets/gallery/4.png'
-import fifthImg from '../assets/gallery/5.png'
-import '../styles/_gallery.scss'
+import React, { useEffect, useState } from "react";
+import Newsletter from "../components/Newsletter";
+import { useOutletContext } from "react-router-dom";
+import "../styles/_gallery.scss";
+import setBinaryToImage from "../utils/setBinaryToImage";
+import useFetchedData from "../hooks/useFetchedData";
+import { TabCardSkeleton } from "../components/admin/TabCard";
+import NotFound from "./NotFound";
+import NotFoundLogo from "../assets/not-found.avif";
 
-function Gallery(props) {
-    const {updatePage} = useOutletContext()
-    let imgs = [firstImg, secondImg, thirdImg, fourthImg, fifthImg]
+function Gallery({}) {
+  const { updatePage, page } = useOutletContext();
+  const [loading, setLoading] = useState(false);
 
-    useEffect(()=>{
-        updatePage("Gallery")
-    })
+  useEffect(() => {
+    updatePage("Gallery");
+  });
 
-    return (
-        <>
-            <main>
-                <section id='gallery-section' className='bg-[#212529] py-[80px]'>
-                    <div id='content-grid' className='grid mx-auto items-center gap-6'>
-                        {imgs.map((pic, i)=> 
-                        <div key={i} className='mx-auto image-wrapper'>
-                        <img alt='One of our images from true talk gallery' src={pic} className='w-[100%]' />
-                        </div>)}
-                    </div>
-                </section>
-            </main>
-            <Newsletter />
-        </>
-    );
+  const { data: imgs } = useFetchedData({
+    tabToFetchFrom: "gallery",
+    setLoading,
+  });
+
+  return (
+    <>
+      <main>
+        <section id="gallery-section" className="bg-[#212529] py-[80px]">
+          {!loading && imgs?.length < 1 ? (
+            <NotFound
+              heading={`${page?.toUpperCase()} NOT FOUND :(`}
+              text={`Oops! 😖 No image available presently. Check Back Later.`}
+              img={NotFoundLogo}
+              notFoundWrapper={true}
+            />
+          ) : (
+            <div id="" className="content-grid grid mx-auto items-center gap-6">
+              {!loading ? (
+                imgs?.map((img, i) => (
+                  <div key={i} className="mx-auto image-wrapper">
+                    <img
+                      src={setBinaryToImage(img?.img?.data)}
+                      className="w-[100%]"
+                      alt="One of our images from true talk gallery"
+                    />
+                  </div>
+                ))
+              ) : (
+                <TabCardSkeleton darkSkeleton={true} />
+              )}
+            </div>
+          )}
+        </section>
+      </main>
+      <Newsletter />
+    </>
+  );
 }
 
 export default Gallery;

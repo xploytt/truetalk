@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
-import SecondaryHero from './SecondaryHero';
+import React, { useState } from "react";
+import { Outlet } from "react-router-dom";
+import SecondaryHero from "./SecondaryHero";
 
-function SharedLayout() {
-  const [page, updatePage] = useState('home')
-  
+function SharedLayout({ updatePage, page }) {
   return (
     <>
-      <SecondaryHero page={page}/> 
-      <Outlet context={{updatePage: updatePage}}/>
+      <SecondaryHero page={page} />
+      <Outlet context={{ updatePage, page }} />
     </>
   );
 }
